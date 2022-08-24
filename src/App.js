@@ -1,18 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-import NavBar from './components/NavBar/NavBar';
+import logo from "./logo.svg";
+import "./App.css";
+import NavBar from "./components/NavBar/NavBar";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 
 function App() {
   return (
-    <div className="App">
-      <NavBar></NavBar>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div>
+      <NavBar />
+      <header>
         <p>
-          Bienvenido a mi tiendita de teclados
+          <h1>Bienvenido a mi tiendita de teclados.</h1>
         </p>
-
       </header>
+      <ItemListContainer />
     </div>
   );
 }
