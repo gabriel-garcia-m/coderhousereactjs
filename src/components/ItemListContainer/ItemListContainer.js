@@ -1,8 +1,8 @@
-import Mensaje from "./Mensaje"
-
-function ItemListContainer() {
+function ItemListContainer({greeting}) {
   return (
-    <div><Mensaje greeting=', mira los teclados:'></Mensaje></div>
+    <div>
+      <h2>Mira los {greeting}</h2>
+    </div>
   )
 }
 

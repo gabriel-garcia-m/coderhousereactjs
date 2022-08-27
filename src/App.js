@@ -6,13 +6,13 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 function App() {
   return (
     <div>
-      <NavBar />
+      <NavBar/>
       <header>
         <p>
           <h1>Bienvenido a mi tiendita de teclados.</h1>
         </p>
       </header>
-      <ItemListContainer />
+      <ItemListContainer greeting = 'teclados:'/>
     </div>
   );
 }
