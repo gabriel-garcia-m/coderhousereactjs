@@ -1,6 +1,7 @@
 import logo from "../../logo.svg";
 import "./styles.css";
 import CartWidget from "../CartWidget/CartWidget";
+//import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -12,13 +13,23 @@ const NavBar = () => {
       <div>
         <ul>
           <li>
-            <a href="#">Inicio</a>
+            {/* <NavLink
+              className={({ isActive }) =>
+                isActive ? "claseActive" : "claseInactive"
+              }
+              to="/"
+            >
+              Home
+            </NavLink> */}
+            <a href="#">Home</a>
           </li>
           <li>
             <a href="#">Nosotros</a>
           </li>
           <li>
-            <a href="#">Contacto</a>
+            <a href="https://twitter.com/gabrielgarciam" target="blank">
+              Contacto
+            </a>
           </li>
         </ul>
       </div>

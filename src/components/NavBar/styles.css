@@ -19,3 +19,12 @@ li{
     margin-left: 10px;
     margin-right: 10px;
 }
+
+.claseActive{
+    color: brown;
+}
+
+.claseInactive{
+    color: aqua;
+}
+
