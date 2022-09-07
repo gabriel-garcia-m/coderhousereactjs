@@ -7,13 +7,16 @@ function ItemDetailContainer() {
 
   const getItem = new Promise((resolve, reject) => {
     setTimeout(() => {
+      
       resolve(datos);
+      
     }, 2000);
   });
 
   useEffect(() => {
     getItem.then((result) => {
-      setItem(result);
+      console.log('debug', result)
+      setItem(result.find(e => e.id === 1));
     });
   }, []);
 
