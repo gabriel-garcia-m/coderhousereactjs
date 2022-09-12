@@ -1,20 +1,27 @@
 import Item from "../Item/Item";
+import './itemListStyles.css'
 
 const ItemList = ({ itemsList }) => {
   return (
-    <>
+
+    <div className="contenedorItem">
+      
       {itemsList.map((prod) => {
         return (
-          <Item
-            key={prod.id}
-            nombre={prod.nombre}
-            descripcion={prod.descripcion}
-            precio={prod.precio}
-            imagen={prod.imagen}
-          />
+            <div >
+            <Item
+              id={prod.id}
+              nombre={prod.nombre}
+              descripcion={prod.descripcion}
+              precio={prod.precio}
+              imagen={prod.imagen}
+            />
+            </div>
+          
         );
       })}
-    </>
+      
+    </div>
   );
 };
 

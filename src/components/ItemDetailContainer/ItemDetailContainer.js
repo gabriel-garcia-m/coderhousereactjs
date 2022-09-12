@@ -1,28 +1,33 @@
+import './itemDetailContainerStyles.css'
 import ItemDetail from "../ItemDetail/ItemDetail";
 import datos from "../ItemListContainer/muestra-datos";
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 function ItemDetailContainer() {
+  const { productId } = useParams();
   const [item, setItem] = useState([]);
 
-  const getItem = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      
-      resolve(datos);
-      
-    }, 2000);
-  });
-
-  useEffect(() => {
-    getItem.then((result) => {
-      console.log('debug', result)
-      setItem(result.find(e => e.id === 1));
+  const getItem = (id) => {
+    return new Promise((resolve, reject) => {
+      const producto = datos.find((item) => item.id === parseInt(id));
+      resolve(producto);
     });
-  }, []);
+  };
+  useEffect(() => {
+    const getProducto = async () => {
+      const detalle = await getItem(productId);
+
+      setItem(detalle);
+    };
+    getProducto();
+  }, [productId]);
 
   return (
-    <div><hr/>
-      <h1>Detalle de Artículo</h1><ItemDetail item = { item }/>
+    <div>
+      
+      <h1>Detalle de Artículo</h1>
+      <ItemDetail item={item} />
     </div>
   );
 }

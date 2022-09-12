@@ -1,9 +1,11 @@
-import ItemCount from "../ItemCount/ItemCount";
+import './itemListContainerStyles.css'
 import ItemList from "../ItemList/ItemList";
 import datos from "./muestra-datos";
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 function ItemListContainer({ greeting }) {
+  const { categoryId } = useParams();
   const [items, setItems] = useState([]);
 
   const getData = new Promise((resolve, reject) => {
@@ -14,21 +16,29 @@ function ItemListContainer({ greeting }) {
 
   useEffect(() => {
     getData.then((result) => {
-      setItems(result);
+      if (categoryId) {
+        const filteredProd = result.filter(
+          (item) => item.category === categoryId
+        );
+        setItems(filteredProd);
+      } else {
+        setItems(result);
+      }
     });
-  }, []);
+  }, [categoryId]);
 
   return (
-    <div>
+    <div >
       <h2>Mira los {greeting}</h2>
-      <ItemCount stock={10} initial={1} />
-       <div>
+      
+      <div className='contenedorItemList'>
         {items.length > 0 ? (
-        <ItemList itemsList = {items}/>
-        ): (
+          <ItemList itemsList={items} />
+        ) : (
           <div>Obteniendo productos...</div>
         )}
-      </div> 
+
+      </div>
     </div>
   );
 }

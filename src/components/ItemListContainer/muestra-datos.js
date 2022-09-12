@@ -6,6 +6,7 @@ const datos = [
     precio: "$100",
     imagen: 'https://techcrunch.com/wp-content/uploads/2022/07/PXL_20220727_173208010.jpg?w=1390&crop=1',
     stock: 15,
+    category: '60'
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ const datos = [
     precio: "$150",
     imagen: "https://media.gamestop.com/i/gamestop/11165571/Logitech-G-PRO-League-of-Legends-Wired-Mechanical-Keyboard?fmt=auto",
     stock: 18,
+    category: '70'
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ const datos = [
     precio: "$80",
     imagen: "https://mechanicalkeyboards.com/shop/images/products/large_8802_large_DKON2187-USPDMAEGGC1QDM_main.jpg",
     stock: 20,
+    category: '70'
   },
 ];
 

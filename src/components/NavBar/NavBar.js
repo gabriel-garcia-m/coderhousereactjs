@@ -1,35 +1,48 @@
 import logo from "../../logo.svg";
 import "./styles.css";
 import CartWidget from "../CartWidget/CartWidget";
-//import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <div className="navbar-container">
       <div>
-        <img width={100} src={logo} alt="logo"></img>
+        <Link to="/">
+          <img width={100} src={logo} alt="logo"></img>
+        </Link>
       </div>
 
       <div>
         <ul>
           <li>
-            {/* <NavLink
+            <NavLink
               className={({ isActive }) =>
                 isActive ? "claseActive" : "claseInactive"
               }
               to="/"
             >
-              Home
-            </NavLink> */}
-            <a href="#">Home</a>
+              Inicio
+            </NavLink>
           </li>
           <li>
-            <a href="#">Nosotros</a>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "claseActive" : "claseInactive"
+              }
+              to="/category/60"
+            >
+              Teclados 60%
+            </NavLink>
           </li>
           <li>
-            <a href="https://twitter.com/gabrielgarciam" target="blank">
-              Contacto
-            </a>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "claseActive" : "claseInactive"
+              }
+              to="/category/70"
+            >
+              Teclados 70%+
+            </NavLink>
           </li>
         </ul>
       </div>

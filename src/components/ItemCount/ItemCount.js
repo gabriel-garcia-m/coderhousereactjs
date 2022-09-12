@@ -23,14 +23,10 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         </button>
       </div>
       <button
+        disabled={stock===0}
         className="btnAdd"
-        onClick={
-          (onAdd = () => {
-            if (contador <= stock && contador > 0) {
-              console.log("Anadido");
-            }
-          })
-        }
+        onClick={()=>onAdd(contador)}
+        
       >
         Añadir a carrito
       </button>
