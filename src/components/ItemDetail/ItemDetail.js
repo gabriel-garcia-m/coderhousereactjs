@@ -2,6 +2,7 @@ import './itemDetailStyles.css'
 import ItemCount from '../ItemCount/ItemCount';
 import { useState, useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
+import {Link} from 'react-router-dom'
 
 const ItemDetail = ({ item }) => {
   const {addItem} = useContext(CartContext)
@@ -20,6 +21,13 @@ const ItemDetail = ({ item }) => {
       <p className='price_container'>{item.precio}</p>
       <h6>Contador: {contador}</h6>
       <ItemCount stock={10} initial={1} onAdd={onAdd}/>
+
+      {
+          contador > 0 &&
+          <Link to='/cartcontainer'>
+          <button>Terminar mi compra</button>
+          </Link>
+      }
     </div>
   );
 };

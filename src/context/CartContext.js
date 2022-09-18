@@ -21,9 +21,12 @@ export const CartProvider = ({ children }) => {
       );
       const newArray = [...productCartList];
       newArray[prod].quantity = newArray[prod].quantity + quantity;
+      newArray[prod].quantityPrice =
+        newArray[prod].quantity * newArray[prod].precio;
       setProductCartList(newArray);
     } else {
       const newList = [...productCartList];
+      newProduct.quantityPrice = newProduct.quantity * newProduct.precio;
       newList.push(newProduct);
       setProductCartList(newList);
     }
@@ -38,9 +41,32 @@ export const CartProvider = ({ children }) => {
     setProductCartList([]);
   };
 
+  const getPrecioTotal = () => {
+    const precioTotal = productCartList.reduce(
+      (acumulador, item) => acumulador + item.quantityPrice,
+      0
+    );
+    return precioTotal;
+  };
+
+  const getTotalQuantity = () => {
+    const total = productCartList.reduce(
+        (acumulador, item) => acumulador + item.quantity,
+        0
+      );
+      return total;
+  }
+
   return (
     <CartContext.Provider
-      value={{ productCartList, addItem, removeItem, clearCart }}
+      value={{
+        productCartList,
+        addItem,
+        removeItem,
+        clearCart,
+        getPrecioTotal,
+        getTotalQuantity
+      }}
     >
       {children}
     </CartContext.Provider>
