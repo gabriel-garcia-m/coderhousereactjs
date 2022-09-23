@@ -44,6 +44,16 @@ const NavBar = () => {
               Teclados 70%+
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "claseActive" : "claseInactive"
+              }
+              to="/contacto"
+            >
+              Contacto
+            </NavLink>
+          </li>
         </ul>
       </div>
       <NavLink to="/cartcontainer">
