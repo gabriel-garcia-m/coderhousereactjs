@@ -32,20 +32,6 @@ function ItemDetailContainer() {
     };
     getData();
   }, [productId]);
-  // const getItem = (id) => {
-  //   return new Promise((resolve, reject) => {
-  //     const producto = datos.find((item) => item.id === parseInt(id));
-  //     resolve(producto);
-  //   });
-  // };
-  // useEffect(() => {
-  //   const getProducto = async () => {
-  //     const detalle = await getItem(productId);
-
-  //     setItem(detalle);
-  //   };
-  //   getProducto();
-  // }, [productId]);
 
   return (
     <div>

@@ -5,14 +5,15 @@
     text-align: center;
     font-family: arial;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
   }
   
   .price {
-    color: grey;
+    color: rgb(68, 68, 68);
     font-size: 22px;
+    font-weight: bold;
   }
   
   .card button {
@@ -26,6 +27,7 @@
     cursor: pointer;
     width: 100%;
     font-size: 18px;
+    text-decoration: none;
   }
   
   .card button:hover {

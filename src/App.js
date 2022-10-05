@@ -12,17 +12,17 @@ function App() {
     <div>
       <CartProvider>
         <BrowserRouter>
-          <div>
+          <div className="fondo">
             <NavBar />
             <Routes>
               <Route
                 path="/"
-                element={<ItemListContainer greeting="teclados:" />}
+                element={<ItemListContainer greeting="de teclados..." />}
               />
               <Route
                 path="/category/:categoryId"
                 element={
-                  <ItemListContainer greeting="teclados de esta categoría:" />
+                  <ItemListContainer greeting=", mira los teclados de esta categoría..." />
                 }
               />
               <Route
@@ -30,7 +30,7 @@ function App() {
                 element={<ItemDetailContainer />}
               />
               <Route path="/cartcontainer" element={<CartContainer />} />
-              <Route path="/contacto" element={<Contact/>}/>
+             
             </Routes>
           </div>
         </BrowserRouter>

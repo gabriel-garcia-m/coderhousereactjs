@@ -18,14 +18,14 @@ const ItemDetail = ({ item }) => {
       <img src={item.imagen} alt={item.nombre} width={300} height={200} />
       <h2>{item.nombre}</h2>
       <p>{item.descripcion}</p>
-      <p className='price_container'>{item.precio}</p>
-      <h6>Contador: {contador}</h6>
+      <p className='price_container'>Precio: $US {item.precio}</p>
+     
       <ItemCount stock={10} initial={1} onAdd={onAdd}/>
 
       {
           contador > 0 &&
           <Link to='/cartcontainer'>
-          <button>Terminar mi compra</button>
+          <button className='btnTerminar'>Terminar mi compra</button>
           </Link>
       }
     </div>

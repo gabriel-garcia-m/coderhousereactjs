@@ -33,7 +33,7 @@ function ItemListContainer({ greeting }) {
           };
           return newProduct;
         });
-        // console.log(productos);
+        
         setItems(productos);
       } else {
         const queryRef = collection(db, "items");
@@ -45,34 +45,15 @@ function ItemListContainer({ greeting }) {
           };
           return newProduct;
         });
-        // console.log(productos);
         setItems(productos);
       }
     };
     getData();
   }, [categoryId]);
-  // const getData = new Promise((resolve, reject) => {
-  //   setTimeout(() => {
-  //     resolve(datos);
-  //   }, 2000);
-  // });
-
-  // useEffect(() => {
-  //   getData.then((result) => {
-  //     if (categoryId) {
-  //       const filteredProd = result.filter(
-  //         (item) => item.category === categoryId
-  //       );
-  //       setItems(filteredProd);
-  //     } else {
-  //       setItems(result);
-  //     }
-  //   });
-  // }, [categoryId]);
 
   return (
     <div>
-      <h2>Mira los {greeting}</h2>
+      <h2>Bienvenidx a la tiendita {greeting}</h2>
 
       <div className="contenedorItemList">
         {items.length > 0 ? (

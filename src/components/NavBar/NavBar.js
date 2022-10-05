@@ -31,7 +31,7 @@ const NavBar = () => {
               }
               to="/category/60"
             >
-              Teclados 60%
+              Teclados tamaño 65%
             </NavLink>
           </li>
           <li>
@@ -41,19 +41,10 @@ const NavBar = () => {
               }
               to="/category/70"
             >
-              Teclados 70%+
+              Teclados tamaño 75% y más...
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? "claseActive" : "claseInactive"
-              }
-              to="/contacto"
-            >
-              Contacto
-            </NavLink>
-          </li>
+    
         </ul>
       </div>
       <NavLink to="/cartcontainer">
@@ -61,9 +52,7 @@ const NavBar = () => {
           <CartWidget />
         </div>
       </NavLink>
-      <div>
-        <button>Acceso</button>
-      </div>
+
     </div>
   );
 };
