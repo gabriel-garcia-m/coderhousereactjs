@@ -9,7 +9,7 @@ function CartWidget() {
         
         <img width={100} height={65} src={CartWidgetImg} alt='CartWidget'></img>
 
-        <span style={{backgroundColor: 'white', borderRadius: '20%', width:'10px', height:'10px', fontSize:'20px', color:'black'}}>{getTotalQuantity()}</span>
+        <span style={{backgroundColor: 'red', borderRadius: '20%', width:'10px', height:'10px', fontSize:'20px', color:'white', fontWeight:'bold', textDecoration:'none'}}>{getTotalQuantity()}</span>
     </div>
   )
 }

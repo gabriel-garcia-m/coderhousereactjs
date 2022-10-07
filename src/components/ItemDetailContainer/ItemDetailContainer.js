@@ -35,7 +35,7 @@ function ItemDetailContainer() {
 
   return (
     <div>
-      <h1>Detalle de Artículo</h1>
+      <h2>Mira los detalles del teclado:</h2>
       <ItemDetail item={item} />
     </div>
   );

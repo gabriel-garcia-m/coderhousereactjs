@@ -5,11 +5,10 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCont
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CartProvider } from "./context/CartContext";
 import { CartContainer } from "./components/CartContainer/CartContainer";
-import Contact from './components/Contact/Contact'
 
 function App() {
   return (
-    <div>
+    <div className="estructura">
       <CartProvider>
         <BrowserRouter>
           <div className="fondo">
@@ -30,11 +29,23 @@ function App() {
                 element={<ItemDetailContainer />}
               />
               <Route path="/cartcontainer" element={<CartContainer />} />
-             
             </Routes>
           </div>
         </BrowserRouter>
       </CartProvider>
+      <>
+        <footer
+          className="subtitle"
+          style={{
+            height: "40px",
+            background: "lightgray",
+            textAlign: "center",
+            padding: "40px",
+          }}
+        >
+          Tiendita de Teclados, 2022.
+        </footer>
+      </>
     </div>
   );
 }

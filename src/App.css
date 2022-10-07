@@ -44,6 +44,16 @@ h1, h2 {
 .fondo{
   
   background-image: url('https://wallpapercave.com/wp/wp4354503.jpg');
- 
+  height: 100%;
 
 }
+
+.estructura{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-items: auto;
+}
+
+
